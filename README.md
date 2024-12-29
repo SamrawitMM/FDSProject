@@ -1,4 +1,3 @@
-# FDSProject
 # ADHD Classification using Random Forest, LSTM, and CNN
 
 This project implements machine learning and deep learning models (Random Forest, LSTM, and CNN) to classify ADHD diagnosis using functional MRI (fMRI) and task performance data. The project preprocesses fMRI data, extracts features, and trains models to predict ADHD status.
