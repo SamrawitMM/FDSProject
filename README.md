@@ -1,19 +1,38 @@
 # FDSProject
-Final Project
+# ADHD Classification using Random Forest, LSTM, and CNN
+
+This project implements machine learning and deep learning models (Random Forest, LSTM, and CNN) to classify ADHD diagnosis using functional MRI (fMRI) and task performance data. The project preprocesses fMRI data, extracts features, and trains models to predict ADHD status.
+
+---
+
+## Features and Implementation
+
+### Data Loading and Preprocessing
+- **Participants Information**: Reads participant metadata from `participants.tsv`.
+- **fMRI Files**: Extracts BOLD activity and masks regions for feature extraction.
+- **Event Files**: Analyzes task-based event data, such as `go` and `no-go` counts and response times.
+
+### Feature Engineering
+- Combines fMRI mean activation, task performance features (`go`, `no-go`, response time), and other metrics.
+- Standardizes features for model compatibility.
+
+### Models
+1. **Random Forest**:
+   - Uses extracted features to classify ADHD.
+   - Outputs feature importance and performance metrics.
+
+2. **Convolutional Neural Network (CNN)**:
+   - Processes 3D fMRI data directly for classification.
+   - Includes Conv3D, MaxPooling3D, Flatten, Dense, and Dropout layers.
+
+3. **LSTM**:
+   - Sequentially processes time-series data from fMRI for ADHD prediction.
+   - Optimized using the Adam optimizer.
+
+[Dataset link](https://openneuro.org/datasets/ds003500/versions/1.2.0)
+
+## Dependencies
+- Python 3.10+
+- Libraries: `numpy`, `pandas`, `nibabel`, `nilearn`, `sklearn`, `tensorflow`, `matplotlib`
 
 
-File structure 
-
-```bash
-.
-├── data
-├── explore_MRI_images.ipynb
-└── README.md
-```
-
-#### Clone the dataset in the data folder
-```bash
-git clone https://github.com/OpenNeuroDatasets/ds003500 
-```
-
-For now, we have a [`explore_MRI_images.ipynb`](https://github.com/SamrawitMM/FDSProject/blob/master/explore_MRI_images.ipynb) to read the images functional and anatomical which are 4dimnetial so let's take it from here to make more preprocessing to make it ready for the model. In the subfolders there is metadata let's explore how we can get insights into the metadata there is also a participant.tsv file consisting of some info about the participants Hopefully this will give us some hints to move forward.
