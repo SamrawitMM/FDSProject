@@ -7,6 +7,7 @@ This project implements machine learning and deep learning models (Random Forest
 ## Features and Implementation
 
 ### Data Loading and Preprocessing
+[Dataset link](https://openneuro.org/datasets/ds003500/versions/1.2.0)
 - **Participants Information**: Reads participant metadata from `participants.tsv`.
 - **fMRI Files**: Extracts BOLD activity and masks regions for feature extraction.
 - **Event Files**: Analyzes task-based event data, such as `go` and `no-go` counts and response times.
@@ -27,8 +28,6 @@ This project implements machine learning and deep learning models (Random Forest
 3. **LSTM**:
    - Sequentially processes time-series data from fMRI for ADHD prediction.
    - Optimized using the Adam optimizer.
-
-[Dataset link](https://openneuro.org/datasets/ds003500/versions/1.2.0)
 
 ## Dependencies
 - Python 3.10+
